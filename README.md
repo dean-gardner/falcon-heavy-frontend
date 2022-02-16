@@ -1,4 +1,4 @@
-## FA1.2 Dashboard Template for Tezos.Israel x Madfish Workshop
+## 
 
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
