@@ -5,3 +5,8 @@
 .btn-block {
     width: 100% !important;
 }
+
+.gray-link {
+    color: #747875;
+    font-size: 0.8em;
+}

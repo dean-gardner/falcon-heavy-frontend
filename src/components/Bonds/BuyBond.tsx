@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, VStack, Text, Code, Divider } from "@chakra-ui/react";
+import { Button, Link, VStack, Text, Code, Divider } from "@chakra-ui/react";
 import './BuyBond.css';
 import useBonds from './hooks';
 
@@ -14,7 +14,7 @@ export function BuyBond() {
 						<div className="crypto-exchange buy-form">
 							<div className="">
 								<div className="card-title text-center">
-									<h4 className="text-primary">Bond: FRAX</h4>
+									<h4 className="text-primary">Bond: PLENTY-QUIPU LP</h4>
 								</div>
 
                 <div>
@@ -54,7 +54,10 @@ export function BuyBond() {
               <div className="col-lg-12 details-contatiner">
                     <div className="row">
                       <div className="col-lg-6 ">Your Balance</div>
-                      <div className="col-lg-6 text-right">0 FRAX</div>
+                      <div className="col-lg-6 text-right">0 PLENTY-QUIPU LP
+                        <div><a href='https://www.plentydefi.com/liquidity?tokenB=QUIPU' target="_blank" className='gray-link'>Buy PLENTY-QUIPU LP token</a></div>
+                      </div>
+
                     </div>
                     <div className="row">
                       <div className="col-lg-6 ">Duration</div>
