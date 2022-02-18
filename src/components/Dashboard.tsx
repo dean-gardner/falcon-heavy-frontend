@@ -29,7 +29,7 @@ export function Dashboard() {
 
   
   return (
-    <VStack spacing="6" alignItems="flex-start">
+    <div className="text-center">
       {!pkh ? (
         <Button className="btn btn-primary submit-btn" onClick={connect}>
           Connect wallet
@@ -56,6 +56,6 @@ export function Dashboard() {
           )}
         </>
       )}
-    </VStack>
+    </div>
   );
 }
