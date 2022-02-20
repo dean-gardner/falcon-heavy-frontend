@@ -4,7 +4,7 @@ import { BeaconWallet } from "@taquito/beacon-wallet";
 import { TezosToolkit } from "@taquito/taquito";
 import { NetworkType, PermissionScope } from "@airgap/beacon-sdk";
   
-  import {NETWORK_ADDRESS, BOND_CONTRACT_ADDRESS, NETWORK_TYPE, LP_TOKEN_CONTRACT_ADDRESS} from '../../config/index';
+  import {NETWORK_ADDRESS, TREASURY_CONTRACT_ADDRESS, BOND_CONTRACT_ADDRESS, NETWORK_TYPE, LP_TOKEN_CONTRACT_ADDRESS} from '../../config/index';
 
 const options = {
   name: "Plenty Bonds Marketplace: Falcon Heavy",
@@ -20,7 +20,7 @@ export default function useBonds() {
       // alert('Waiting for back-end');
       
       const bondPrice = 1;
-      const LpToken = {fa12: "KT1GgNMoJhfeWUoqh1RJaFXE1H66tja7L1eU"};
+      const LpToken = "KT1GgNMoJhfeWUoqh1RJaFXE1H66tja7L1eU";
       const LpTokenAmount = 1000;
       const Slippage = 0.5;
 
@@ -28,7 +28,7 @@ export default function useBonds() {
       const wallet = new BeaconWallet(options);
 
       const activeAccount = await wallet.client.getActiveAccount();
-      if (activeAccount ?? 1 == 2) {
+      if (activeAccount && false) {
 
         console.log("Already connected:", activeAccount.address);
         myAddress = activeAccount.address;
@@ -42,27 +42,15 @@ export default function useBonds() {
 
       Tezos.setWalletProvider(wallet);
 
-      Tezos.wallet.at(LP_TOKEN_CONTRACT_ADDRESS).then(contract => {
-        return contract.methods.approve(myAddress, LpTokenAmount).send({from: myAddress});
-      } );
+      // Tezos.wallet.at(LP_TOKEN_CONTRACT_ADDRESS).then(contract => {
+      //   return contract.methods.approve(TREASURY_CONTRACT_ADDRESS, LpTokenAmount).send({from: myAddress});
+      // } );
 
-      // Tezos.wallet.at(BOND_CONTRACT_ADDRESS).then(contract => {
-      //   // bond_price_requested_in_usd: bondPrice, lp_token : LpToken, 
-      //   //   lp_token_amount: LpTokenAmount, slippage: Slippage
-      //   return contract.methods.order(bondPrice, LpTokenAmount, LpToken, Slippage).send({from: myAddress})
-      //     .on('transactionHash', function(hash){
-      //     debugger;
-      //     })
-      //     .on('receipt', function(receipt){
-      //       debugger;
-
-      //     })
-      //     .on('confirmation', function(confirmationNumber, receipt){
-      //       debugger;
-
-      //     })
-      //     .on('error', console.error);
-      //     } );
+      Tezos.wallet.at(BOND_CONTRACT_ADDRESS).then(contract => {
+        // bond_price_requested_in_usd: bondPrice, lp_token : LpToken, 
+        //   lp_token_amount: LpTokenAmount, slippage: Slippage
+        return contract.methods.order(bondPrice, LpTokenAmount, LpToken, Slippage).send({from: myAddress});
+          } );
 
 
       // const batch = await Tezos.wallet.batch()
