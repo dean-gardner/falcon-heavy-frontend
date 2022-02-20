@@ -4,7 +4,8 @@ import { BeaconWallet } from "@taquito/beacon-wallet";
 import { TezosToolkit } from "@taquito/taquito";
 import { NetworkType, PermissionScope } from "@airgap/beacon-sdk";
   
-  import {NETWORK_ADDRESS, TREASURY_CONTRACT_ADDRESS, BOND_CONTRACT_ADDRESS, NETWORK_TYPE, LP_TOKEN_CONTRACT_ADDRESS} from '../../config/index';
+  import {NETWORK_ADDRESS, TREASURY_CONTRACT_ADDRESS, BOND_CONTRACT_ADDRESS, NETWORK_TYPE, LP_TOKEN_CONTRACT_ADDRESS, LP_TOKEN}
+   from '../../config/index';
 
 const options = {
   name: "Plenty Bonds Marketplace: Falcon Heavy",
@@ -20,7 +21,7 @@ export default function useBonds() {
       // alert('Waiting for back-end');
       
       const bondPrice = 1;
-      const LpToken = "KT1GgNMoJhfeWUoqh1RJaFXE1H66tja7L1eU";
+      const LpToken = LP_TOKEN;
       const LpTokenAmount = 1000;
       const Slippage = 0.5;
 
