@@ -3,7 +3,8 @@ import { BeaconWallet } from "@taquito/beacon-wallet";
 
 import { TezosToolkit } from "@taquito/taquito";
 import { NetworkType, PermissionScope } from "@airgap/beacon-sdk";
-import {NETWORK_ADDRESS} from '../config/index';
+
+import {NETWORK_ADDRESS, BOND_CONTRACT_ADDRESS, NETWORK_TYPE} from '../config/index';
 
 const options = {
   name: "Plenty Bonds Marketplace: Falcon Heavy",
@@ -41,8 +42,7 @@ class LambdaViewSigner {
 }
 
 const Tezos = new TezosToolkit(NETWORK_ADDRESS);
-// const Tezos = new TezosToolkit("https://mainnet-tezos.giganode.io");
-//const Tezos = new TezosToolkit("https://delphinet-tezos.giganode.io");
+
 const wallet = new BeaconWallet(options);
 
 
@@ -71,12 +71,10 @@ export default function useBeacon() {
     // }
 
     const _pkh = await wallet.getPKH();
-    debugger;
     setUserPkh(_pkh);
   }, []);
 
  const disconnect = useCallback(async() => {
-   debugger;
     await wallet.client.removeAllAccounts();
  }, []);
 

@@ -2,10 +2,19 @@
 //   NETWORK_ADDRESS,
 // } = process.env;
 
-const NETWORK_ADDRESS = 'https://testnet-tezos.giganode.io/';
-const BOND_CONTRACT_ADDRESS = 'KT1PS4iHeJpMUSQKTrP3XNGUcie2sEb2widG';
+// https://mainnet-tezos.giganode.io
+//https://delphinet-tezos.giganode.io
+//https://hangzhounet.api.tez.ie
+//https://testnet-tezos.giganode.io
+const NETWORK_ADDRESS = 'https://hangzhounet.api.tez.ie/';
+
+const BOND_CONTRACT_ADDRESS = 'KT1Kv4yA9gohSvJTrVHiY671rWhZ4ohAFFVS';
+
+//'mainnet' | 'granadanet' | 'hangzhounet' | 'custom'
+const NETWORK_TYPE = 'hangzhounet';
 
 export {
   NETWORK_ADDRESS,
-  BOND_CONTRACT_ADDRESS
+  BOND_CONTRACT_ADDRESS,
+  NETWORK_TYPE
 }; 
