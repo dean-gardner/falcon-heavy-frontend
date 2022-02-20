@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Button, Link, VStack, Text, Code, Divider } from "@chakra-ui/react";
 import './BuyBond.css';
 import useBonds from './hooks';
-import { Dashboard } from "../Dashboard";
 
 export function BuyBond() {
   const { buyBond } = useBonds();
 
   return (
     <>
-    <Dashboard></Dashboard>
        <div className="content">
                 <div className="row">
                     <div className="col-lg-12">
