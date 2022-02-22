@@ -61,7 +61,7 @@ export function  BondsList() {
                 {console.log('active Item',activeItem)}
                 <div>
                     <div>TOKENS {activeItem.pair1_token_code} {activeItem.pair2_token_code}</div>
-                    <label for='amount'>Token amount</label>
+                    <label className="token__label" for='amount'>Token amount</label>
                     <input type='number' id='amount' onChange={
                         (e)=>{
                             setTokenAmount(e.target.value)

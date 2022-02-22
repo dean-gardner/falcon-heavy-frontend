@@ -52,3 +52,7 @@
 input{
     border: 1px solid black;
 }
+
+.token__label{
+    margin-right: 25px;
+}
