@@ -12,7 +12,7 @@ const NETWORK_ADDRESS = 'https://hangzhounet.api.tez.ie/';
 //'mainnet' | 'granadanet' | 'hangzhounet' | 'custom'
 const NETWORK_TYPE = 'hangzhounet';
 
-const BOND_CONTRACT_ADDRESS = 'KT1Kv4yA9gohSvJTrVHiY671rWhZ4ohAFFVS';
+const BOND_CONTRACT_ADDRESS = 'KT1V9gTAvhuXgb7egVjn6BtCfU4BMtjfvWfR';
 const LP_TOKEN_CONTRACT_ADDRESS =  "KT1GgNMoJhfeWUoqh1RJaFXE1H66tja7L1eU";
 const TREASURY_CONTRACT_ADDRESS =  "KT1VX4MV7RXzBq1bpnxfSG8V2sTtpT5N2TCh";
 const REWARD_TOKEN_CONTRACT_ADDRESS =  "KT1GxEuEZyPe2ba4aVVxPWQDzqEhi62ZruxU";
