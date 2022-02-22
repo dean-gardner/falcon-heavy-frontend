@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Link, VStack, Text, Code, Divider } from "@chakra-ui/react";
 import './BuyBond.css';
 import useBonds from './hooks';
+import { BondsList } from "../BondsList/BondsList";
 
 export function BuyBond() {
   const { buyBond } = useBonds();
@@ -49,6 +50,7 @@ export function BuyBond() {
 										</div>
 									</div>
 								</div>
+                <BondsList />
 
               <div className="row">
               <div className="col-lg-12 details-contatiner">

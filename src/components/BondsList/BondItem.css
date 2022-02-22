@@ -1,0 +1,28 @@
+.wrapper{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid grey;
+    border-radius: 20px;
+}
+.bond_btn{
+    color: #F8CC82;
+    border: 1px solid rgba(252, 252, 252, 0.5);
+    border-color: #F8CC82;
+    width: 100px;
+    height: 39px;
+    margin: 4.5px;
+    font-size: 0.875rem;
+    min-width: max-content;
+    max-height: 39px;
+    line-height: 24px;
+    white-space: nowrap;
+    border-radius: 6px;
+    padding: 6px 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+td, th {
+    text-align: left;
+    padding: 8px;
+  }
