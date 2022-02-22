@@ -1,6 +1,6 @@
 ## 
 
-Test Website is [here](https://dean-gardner.github.io/falcon-heavy-frontend/public/)
+Test Website is [here](https://dean-gardner.github.io/falcon-heavy-frontend/build/)
 
 
 This project was bootstrapped with
