@@ -45,6 +45,7 @@ export function  BondsList() {
 
     return (
         <>
+        <h1>Bond List</h1>
         <table>
         <tr>
     <th>Item icons</th>

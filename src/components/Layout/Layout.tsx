@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Dashboard } from "../Dashboard";
 import {BuyBond} from "../Bonds/BuyBond";
+import { BondsList } from "../BondsList/BondsList";
+
 
 import {
   BrowserRouter as Router,
@@ -46,6 +48,9 @@ export function Layout() {
               <li >
                 <Link to="/buy-bond">Buy bond</Link>
               </li>
+              <li >
+                <Link to="/bond-list">Bond List</Link>
+              </li>
           
             </ul>
           </div>
@@ -66,6 +71,8 @@ export function Layout() {
 
                 </Route>
                 <Route path="/" element={<Dashboard/>}>
+                </Route>
+                <Route path="/bond-list" element={<BondsList/>}>
                 </Route>
            </Routes >
             

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import './BondItem.css';
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 export function BondItem({setActiveItem,setModalActive,item}) {
-
+    const navigate = useNavigate()
     console.log('item',item)
     return (
         <tr>
@@ -15,8 +16,7 @@ export function BondItem({setActiveItem,setModalActive,item}) {
             <td>{item.ROI}</td>
             <td>{item.vesting_days_period}</td>
             <td><button onClick={()=>{
-                setActiveItem(item);
-                setModalActive(true);
+                navigate('/buy-bond')
                 }} 
                 className="bond_btn">Bond</button></td>
         </tr>
